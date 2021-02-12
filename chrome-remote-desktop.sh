@@ -12,7 +12,8 @@ sudo apt install --assume-yes --fix-broken
 sudo DEBIAN_FRONTEND=noninteractive \
 apt install --assume-yes desktop-base
 apt install --assume-yes lxde --no-install-recommends 
-sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/openbox-session" > /etc/chrome-remote-desktop-session'  
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/startlxde" > /etc/chrome-remote-desktop-session'
+#sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/openbox-session" > /etc/chrome-remote-desktop-session'  
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
