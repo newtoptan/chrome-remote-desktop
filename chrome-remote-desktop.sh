@@ -13,7 +13,6 @@ sudo DEBIAN_FRONTEND=noninteractive \
 apt install --assume-yes desktop-base
 apt install --assume-yes lxde --no-install-recommends 
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/startlxde" > /etc/chrome-remote-desktop-session'
-#sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/openbox-session" > /etc/chrome-remote-desktop-session'  
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -23,7 +22,7 @@ sudo apt install nano gnome-system-monitor nautilus  fonts-thai-tlwg  screenfetc
 sudo adduser ubuntu chrome-remote-desktop
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/$(lsb_release -is) \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 sudo apt-get update
