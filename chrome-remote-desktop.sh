@@ -23,7 +23,7 @@ sudo apt install nano gnome-system-monitor nautilus  fonts-thai-tlwg  screenfetc
 sudo adduser ubuntu chrome-remote-desktop
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/$(lsb_release -i) \
+   "deb [arch=amd64] https://download.docker.com/linux/$(lsb_release -is) \
    $(lsb_release -cs) \
    stable"
 sudo apt-get update
