@@ -30,7 +30,7 @@ sudo apt-get update
 apt install --assume-yes docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker ubuntu
 docker volume create portainer_data
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+docker run -d -p 8090:8000 -p 9080:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
