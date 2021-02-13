@@ -18,11 +18,11 @@ sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
-sudo apt install nano gnome-system-monitor nautilus  fonts-thai-tlwg  screenfetch -y 
+sudo apt install --assume-yes nano gnome-system-monitor nautilus  fonts-thai-tlwg  screenfetch 
+sudo apt install --assume-yes apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 sudo adduser ubuntu chrome-remote-desktop
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable
-sudo apt-get update
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"  | sudo apt-get update
 apt install --assume-yes docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker ubuntu
 docker volume create portainer_data
